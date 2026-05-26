@@ -20,20 +20,23 @@ document.addEventListener('DOMContentLoaded', () => {
     // Define the sequence of funny texts when they click NO
     const noTexts = [
         "Emin misin? 🥺 Lütfen bir daha düşün...",
-        "Son kararın mı? 😭 Bak ağlarım...",
+        "", // "Son kararın mı? 😭 Bak ağlarım..." kaldırıldı
         "Beni çok üzüyorsun... Emin misin? 😢",
         "Bence yanlışlıkla bastın... Hadi EVET'e bas! 😤"
     ];
 
     // Handle NO button click
     btnNo.addEventListener('click', (e) => {
+        // "Büyüklerimin ellerinden..." yazısını kaldır
+        mainTitle.classList.add('hidden');
+
         if (noClickCount === 0) {
             mainImg.src = "fotograf1.png";
             subTitle.innerText = noTexts[0];
             noClickCount++;
         } else if (noClickCount === 1) {
             mainImg.src = "fotograf2.png";
-            subTitle.innerText = noTexts[1];
+            subTitle.innerText = noTexts[1]; // Boş metin
             noClickCount++;
         } else if (noClickCount === 2) {
             mainImg.src = "fotograf3.png";
@@ -83,8 +86,11 @@ document.addEventListener('DOMContentLoaded', () => {
     btnYes.addEventListener('click', () => {
         // Change to 4th image and show success
         mainImg.src = "fotograf4.png";
+        
+        // "Büyüklerimin ellerinden..." yazısı görünüyorsa bile YES diyince değişsin
+        mainTitle.classList.remove('hidden');
         mainTitle.innerText = "Biliyordum! 😍";
-        subTitle.innerText = "Dünyanın en tatlı, en bonkör büyüğü sensin! 🎉";
+        subTitle.innerText = ""; // İstenilen metin kaldırıldı
         
         // Hide buttons, show IBAN
         buttonContainer.classList.add('hidden');

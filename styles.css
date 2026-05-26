@@ -63,17 +63,17 @@ body {
 
 .image-container {
     margin-bottom: 20px;
-    min-height: 180px; /* Sabit yükseklik, resim değişirken zıplamayı önler */
+    min-height: 250px; /* Daha büyük fotoğraflar için */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .sheep-img {
-    width: 180px;
-    height: 180px;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 20px; /* Yuvarlaktan hafif köşeliye geçtik, fotoğraflar daha iyi görünsün diye */
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     animation: float 3s ease-in-out infinite;
     border: 4px solid white;
