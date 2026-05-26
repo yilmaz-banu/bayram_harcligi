@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="GpTmsG690wWe1j0w7iKX-4_XG8FBX3Gmtk3OuHorLjE" />
+    <title>Hayırlı Bayramlar! 🐑</title>
+    <!-- Google Fonts for cute typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="clouds"></div>
+    
+    <div class="container">
+        <div class="card glass">
+            <div class="image-container">
+                <!-- Buradaki id="main-img" ile JavaScript üzerinden resmi değiştireceğiz -->
+                <img src="sheep.png" id="main-img" alt="Tatlış Kuzu" class="sheep-img">
+            </div>
+            
+            <h1 id="main-title" class="title">Büyüklerimin ellerinden,<br>küçüklerimin gözlerinden öperim! 🍬</h1>
+            <p id="sub-title" class="subtitle">Bu bayram yanınızda değilim ama kalbim sizinle. Bayram harçlığımı göndermek ister misiniz? 😇</p>
+            
+            <div id="button-container" class="button-group">
+                <button id="btn-yes" class="cute-btn btn-yes">EVET 😍</button>
+                <button id="btn-no" class="cute-btn btn-no">HAYIR 😔</button>
+            </div>
+            
+            <div id="iban-container" class="iban-card hidden">
+                <p class="iban-title">Banka Hesabım 💖</p>
+                <div class="iban-box">
+                    <span id="iban-text">TR51 0001 0090 1038 4970 2050 01</span>
+                    <button id="copy-btn" class="copy-btn" aria-label="Kopyala">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                    </button>
+                </div>
+                <p class="iban-name">Ad Soyad: Gülbanu Yılmaz</p>
+                <p class="thank-you-msg">Allah bereket versin! Çok teşekkür ederim 🥰</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
